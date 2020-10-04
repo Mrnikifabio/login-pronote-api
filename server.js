@@ -79,7 +79,12 @@ app.post('/login',(req, res)=>{
                 {
                     var user = (await (await driver).findElement(webdriver.By.css("div.ibe_util_texte.ibe_actif"))).getText();
                     user = (await user).split(" - ")[1].split(" ");
-                    var name = user[user.length-2];
+                    var name = "";
+                    if(opt=="doc")
+                        name = user[user.length-1];
+                    else
+                        name = user[user.length-2];
+
                     var surname = user[0];
 
                     //get student class
