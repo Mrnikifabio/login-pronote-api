@@ -69,8 +69,8 @@ app.post('/login',(req, res)=>{
                 await driver.navigate().to(process.env.PROFESSOR_LOGIN_URL);
 
         sleep(2.5).then(async()=>{
-            await driver.findElement(webdriver.By.id("id_49")).sendKeys(usr);
-            await driver.findElement(webdriver.By.id("id_50")).sendKeys(psw);
+            await driver.findElement(webdriver.By.id("id_50")).sendKeys(usr);
+            await driver.findElement(webdriver.By.id("id_51")).sendKeys(psw);
             await driver.findElement(webdriver.By.id("id_39")).click();
 
             sleep(5).then(async()=>{
